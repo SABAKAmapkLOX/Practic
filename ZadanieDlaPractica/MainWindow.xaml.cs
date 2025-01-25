@@ -64,7 +64,7 @@ namespace ZadanieDlaPractica
         {
             bool boolMaxMas = int.TryParse(tbTaskThreeMaxMas.Text, out int maxMas);
             bool boolMasRow = int.TryParse(tbTaskThreeMasRow.Text, out int masRow);
-            if (boolMasRow && boolMaxMas)
+            if (boolMasRow && boolMaxMas && maxMas > 0 && masRow > 0)
             {
                 TaskThree taskThree = new TaskThree(maxMas, masRow);
                 int masResult = taskThree.AvgMasSum();
@@ -77,7 +77,7 @@ namespace ZadanieDlaPractica
             bool boolMatrixMax = int.TryParse(tbTaskFourMaxMatrix.Text, out int matrixMax);
             bool boolMatrixColumn = int.TryParse(tbTaskFourColumn.Text, out int matrixColumn);
             bool boolMatrixRow = int.TryParse(tbTaskFourRow.Text, out int matrixRow);
-            if(boolMatrixColumn && boolMatrixMax && boolMatrixRow)
+            if(boolMatrixColumn && boolMatrixMax && boolMatrixRow && matrixMax > 0 && matrixRow > 0 && matrixColumn > 0)
             {
                 int[] mas;
                 TaskFour taskFour = new TaskFour(matrixMax, matrixColumn, matrixRow);
